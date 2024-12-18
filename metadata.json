@@ -1,0 +1,14 @@
+{
+  "name": "SkyPad",
+  "creator": "SkyPad",
+  "version": "1.0",
+  "description": "some cool stuff maybe idk",
+  "entry": "index.js",
+  "requires": [
+    "Vigilance",
+    "BloomCore",
+    "PogData",
+    "RenderLib",
+    "FontLib"
+  ]
+}
