@@ -1,6 +1,7 @@
 /// <reference types="../CTAutocomplete" />
 /// <reference lib="es2015" />
 
+import './features/data'
 import config from './config'
 import './features/misc/fixParty'
 import { shownChangelog } from './features/data'
@@ -31,14 +32,10 @@ function displayWelcomeMessage() {
 // Register the `/skypad` and `/sp` commands to open the SkyPad GUI
 register('command', (arg) => {
     if (arg && arg.toLowerCase() == 'pb') {
-        sendPBMessage();
+        sendPBMessage()
     } else {
-        config.openGUI();  // This should open the SkyPad GUI
+        config.openGUI()  // This should open the SkyPad GUI
     }
 }).setName('skypad').setAliases('sp');
 
-// Changelog checker
-const checker = register("tick", () => {
-    checker.unregister();
-    displayWelcomeMessage();
-});
+displayWelcomeMessage();
